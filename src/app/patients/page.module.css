@@ -78,6 +78,25 @@
     font-weight:600;
     margin:6px 0px 6px 12px;
 }
+.searchInput {
+    width:260px;
+    outline:none;
+    border:none;
+    height:36px;
+    background-color:aliceblue;
+    border:1px solid rgb(133, 197, 253);
+    border-radius:8px;
+    margin-right:16px;
+    padding-left:14px;
+  }
+
+  .searchButton {
+    width:100px;
+    height:36px;
+    background-color:rgb(2, 2, 117);
+    border-radius:24px;
+    color:#ffff;
+  }
 
 .type {
     font-size:16px;
@@ -250,6 +269,13 @@
     .image {
         width:20px;
         height:20px;
+    }
+    .searchInput{
+        margin-left: 57px;
+    }
+    .searchButton{
+        margin-left: 129px;
+        margin-top: 12px;
     }
 
 }

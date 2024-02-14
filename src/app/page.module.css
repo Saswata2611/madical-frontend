@@ -115,6 +115,9 @@
 .tab {
   border-radius:12px;
 }
+.tab:hover{
+  cursor: pointer;
+}
 
 .div {
   width:360px;
@@ -128,6 +131,7 @@
   font-size:18px;
   margin-top:24px;
 }
+
 
 .contact {
   width: 100%;

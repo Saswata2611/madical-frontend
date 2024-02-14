@@ -8,10 +8,17 @@
     flex-direction:column;
     background-color:#87cfebab;
 }
-
+.backbtn{
+    margin-top: -200px;
+    margin-left: -1389px;
+    /* padding-top: -20px; */
+}
+.form{
+    margin-top: 180px;
+}
 .myform {
     width:380px;
-    height:auto;
+    height:230px;
     background-color:#ffff;
     border-radius:8px;
     box-shadow:4px 4px 34px rgba(0,0,0,0.15);

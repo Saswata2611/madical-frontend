@@ -62,11 +62,28 @@ export default function Home() {
   const renderData = foundProducts.length > 0 ? foundProducts : data;
 
   return (
+    
     <main className={styles.main}>
+      <nav className={styles.nav}>
+      <Link href="/admin">
+                <Image className={styles.back}
+                src="/arrow-left.svg"
+                alt=""
+                width={34}
+                height={34}
+                />
+        </Link>
+        <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
+        src="/logo.png"
+        alt=""
+        width={236}
+        height={236}
+        />
+      </nav>
       {/* Other components and elements... */}
-      <Link className={styles.back} href="/admin">Go back</Link>
+
       <div className={styles.container}>
-        <h1 className={styles.header}>Product Information</h1>
+        <h1 className={styles.header}>ALL PRODUCTS</h1>
         <div className={styles.searchContainer} style={{ float: 'right', margin: '16px 0px' }}>
           <input
             className={styles.searchInput}
@@ -84,8 +101,8 @@ export default function Home() {
             <tr className={`${styles.headerRow} ${styles.tr}`}>
               <th className={`${styles.th}`}>Image</th>
               <th className={`${styles.th}`}>Price</th>
-              <th className={`${styles.th}`}>Product Description</th>
               <th className={`${styles.th}`}>Product Name</th>
+              <th className={`${styles.th}`}>Product Description</th>
               <th className={`${styles.th}`}>Quantity</th>
               <th className={`${styles.th}`}>Type</th>
             </tr>
@@ -99,8 +116,8 @@ export default function Home() {
                     />
                 </td>
                 <td className={`${styles.td}`}>{product.Price}</td>
-                <td className={`${styles.td}`}>{product.Product_Description}</td>
                 <td className={`${styles.td}`}>{product.Product_Name}</td>
+                <td className={`${styles.td}`}>{product.Product_Description}</td>
                 <td className={`${styles.td}`}>{product.Quantity}</td>
                 <td className={`${styles.td}`}>{product.Type}</td>
               </tr>

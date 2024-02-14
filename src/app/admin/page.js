@@ -26,14 +26,16 @@ export default function Home() {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
-
+  const goToAnotherPage = () => {
+    router.replace('/');
+  };
   return (
     <main className={styles.main}>
         <nav className={styles.nav}>
             <ul>
-                <Link href="/admin"><li className={styles.li}>Product</li></Link>
+                <Link href="/admin"><li className={styles.li} style={{textDecoration:'underline'}}>Product</li></Link>
                 <Link href="/query"><li className={styles.li}>Queries</li></Link>
-                <Link href="/"><li className={`${styles.li} ${styles.logout}`}>Log out</li></Link>
+                <Link href="" onClick={goToAnotherPage}><li className={`${styles.li} ${styles.logout}`}>Log out</li></Link>
             </ul>
             <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
             src="/logo.png"

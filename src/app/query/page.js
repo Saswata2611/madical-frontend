@@ -65,7 +65,7 @@ export default function Home() {
         <nav className={styles.nav}>
             <ul>
                 <Link href="/admin"><li className={styles.li}>Product</li></Link>
-                <Link href="/query"><li className={styles.li}>Queries</li></Link>
+                <Link href="/query"><li className={styles.li} style={{textDecoration:'underline'}}>Queries</li></Link>
             </ul>
             <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
             src="/logo.png"
@@ -76,7 +76,7 @@ export default function Home() {
         </nav>
       {/* Other components and elements... */}
       <div className={styles.container} style={{ marginTop: '204px' }}>
-        <h1 className={styles.header}>Query Information</h1>
+        <h1 className={styles.header}>ALL QUERIES</h1>
         <div className={styles.searchContainer} style={{ float: 'right', margin: '16px 0px' }}>
           <input
             className={styles.searchInput}

@@ -55,7 +55,7 @@ export default function Home() {
         <ul>
           <li className={styles.liEle}><a href="#home">Home</a></li>
           <li className={styles.liEle}><Link href="/about">About</Link></li>
-          <li className={styles.liEle}><a href="#services">Services</a></li>
+          <li className={styles.liEle}><a href="/patients">Explore</a></li>
           <li className={styles.liEle}><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -68,8 +68,8 @@ export default function Home() {
         />
         <ul className={styles.nav_link}>
           <li className={styles.li_ele}><a href="#home">Home</a></li>
-          <li className={styles.li_ele}><a href="#about">About</a></li>
-          <li className={styles.li_ele}><Link href="/medicines">Explore</Link></li>
+          <li className={styles.li_ele}><a href="/about">About</a></li>
+          <li className={styles.li_ele}><Link href="/patients">Explore</Link></li>
           <li className={styles.li_ele}><a href="#contact">Contact</a></li>
         </ul>
         <Image className={styles.menu}
@@ -85,7 +85,7 @@ export default function Home() {
         <div className={styles.overlay}>
         <h1 className={`${styles.h1} ${styles.home_h}`}>Realize <br /> a Better You</h1>
         <p className={styles.para}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-        <Link href="/medicines"><button className={styles.btn}>Explore <Image src="/forward.svg" alt="" width={24} height={24} /></button></Link>
+        <Link href="/patients"><button className={styles.btn}>Explore <Image src="/forward.svg" alt="" width={24} height={24} /></button></Link>
         </div>
       </div>
 
@@ -102,9 +102,10 @@ export default function Home() {
             height={300}
             />
             </div>
-            <p className={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p className={styles.p}>DOCTORS</p>
           </div>
           </Link>
+          <Link href='/patients'>
           <div className={styles.div}>
           <div className={styles.img_container}>
             <Image className={styles.tab}
@@ -114,8 +115,9 @@ export default function Home() {
             height={300}
             />
             </div>
-            <p className={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p className={styles.p}>PATIENTS</p>
           </div>
+          </Link>
         </div>
       </div>
 
@@ -144,7 +146,7 @@ export default function Home() {
 
         <ul>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#home">Home</a></li>
-          <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#about">About</a></li>
+          <li className={styles.liEle} style={{ color: '#ffff' }}><a href="/about">About</a></li>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#services">Services</a></li>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#contact">Contact</a></li>
         </ul>

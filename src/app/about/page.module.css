@@ -1,6 +1,6 @@
 .main {
     width:100vw;
-    height:100vh;
+    height:auto;
     overflow:hidden;
     display:flex;
     flex-direction:column;
@@ -23,8 +23,17 @@
   }
 
   .li_ele {
+    width: 150px;
+    height: 35px;
+    justify-content: center;
     font-size:18px;
     float:left;
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: rgba(117, 225, 246, 0.821);
+    font-weight: 500;
+    padding-left: 40px;
+    padding-top: 2px;
   }
 
   .about {
@@ -33,23 +42,50 @@
     background-color:#ffff;
     display:flex;
   }
+  .about2 {
+    width:100%;
+    height:calc(100vh - 64px);
+    background-color:#ffff;
+    display:flex;
+  }
   
   .left {
-    width:50%;
+    width:40%;
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    margin-left: 100px;
   }
-  
-  .right {
-    width:50%;
+  .left2{
+    width:70%;
     height:100%;
+    margin-left:0px;
     background:url('/group 1.svg');
     background-repeat:no-repeat;
     background-position:center;
     background-size:cover;
+    transform: scaleX(-1);
+  }
+  
+  .right {
+    width:60%;
+    height:100%;
+    margin-left: -100px;
+    background:url('/group 1.svg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+  }
+  .right2{
+    width:40%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    margin-left: -200px;
   }
 
   .para {
@@ -66,13 +102,18 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .main {
-        height:auto;
+
+    .nav {
+      padding: 0px 4px;
+      margin-top: 13px;
     }
 
     .about {
         height:860px;
         flex-direction:column;
+        font-size: 16px;
+        margin-left: -180px;
+        margin-top: 26px;
     }
 
     .left {
@@ -82,8 +123,22 @@
     }
 
     .right {
-        width:100%;
-        height:380px;
+display: none;
     }
+    .about2 {
+      height: 860px;
+      flex-direction: column;
+      margin-left: 415px;
+      margin-top: -140px;
+      margin-bottom: 100px;
+  }
 
+  .left2 {
+display: none;
+  }
+
+  .right2 {
+      width:100%;
+      height:380px;
+  }
   }

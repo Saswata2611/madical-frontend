@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import styles from "./page.module.css";
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const router = useRouter();
@@ -42,6 +44,17 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+       <div className={styles.backbtn}>
+         <Link href="/" >
+                <Image 
+                src="/arrow-left.svg"
+                alt=""
+                width={34}
+                height={34}
+                />
+        </Link>
+      </div>
+      <div className={styles.form}>
       <form className={styles.myform}>
         <label>
             Admin Name:
@@ -53,6 +66,8 @@ export default function Home() {
         </label>
         <button className={styles.submit} onClick={handleSubmit}>Submit</button>
       </form>
+      </div>
     </main>
+    
   );
 }
