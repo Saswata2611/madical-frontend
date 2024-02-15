@@ -109,6 +109,7 @@
 
     .searchContainer {
         width:100%;
+        display: flex;
     }
 
     .searchInput {
