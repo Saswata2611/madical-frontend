@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
         <nav className={styles.nav}>
-            <ul>
+            <ul style={{display:'flex'}}>
                 <Link href="/admin"><li className={styles.li} >Product</li></Link>
                 <Link href="/query"><li className={styles.li} style={{textDecoration:'underline'}}>Queries</li></Link>
                 <Link href="" onClick={goToAnotherPage}><li className={`${styles.li} ${styles.logout}`}>Log out</li></Link>
