@@ -55,6 +55,11 @@
 
     .myform {
         width:90%;
+        margin-left: 20px;
+        margin-top: -50px;
     }
-
+.backbtn{
+    margin-left: -280px;
+    /* margin-top: 0px; */
+}
 }
