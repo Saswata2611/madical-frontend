@@ -47,7 +47,7 @@ export default function Home() {
 
   async function getData() {
     try {
-      const response = await fetch('http://192.168.29.134:1015/searchall');
+      const response = await fetch('https://medical-website-backend.onrender.com/searchall');
       const result = await response.json();
       console.log(result);
 

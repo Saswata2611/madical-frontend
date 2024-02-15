@@ -27,7 +27,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `http://192.168.29.134:1015/login?username=${username}&password=${password}`
+        `https://medical-website-backend.onrender.com/login?username=${username}&password=${password}`
       );
 
       if (response.ok) {

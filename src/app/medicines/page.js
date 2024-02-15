@@ -26,7 +26,7 @@ const [content, setContent] = useState({});
 
 const getData = async () => {
     try {
-        const response = await fetch('http://192.168.29.134:1015/searchall');
+        const response = await fetch('https://medical-website-backend.onrender.com/searchall');
         const result = await response.json();
         setData(result);
         console.log(result);

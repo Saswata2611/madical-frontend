@@ -22,7 +22,7 @@ export default function Home() {
 
     try {
       const queryParams = new URLSearchParams(formData);
-      const response = await fetch(`http://192.168.29.134:1015/register?${queryParams}`, {
+      const response = await fetch(`https://medical-website-backend.onrender.com/register?${queryParams}`, {
         method: 'POST',
       });
 

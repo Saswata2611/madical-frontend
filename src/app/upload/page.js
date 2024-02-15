@@ -34,7 +34,7 @@ export default function Home() {
       formDataObj.append('quantity', formData.quantity);
       formDataObj.append('price', formData.price);
   
-      const response = await fetch('http://192.168.29.134:1015/upload', {
+      const response = await fetch('https://medical-website-backend.onrender.com/upload', {
         method: 'POST',
         body: formDataObj,
       });

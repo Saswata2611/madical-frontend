@@ -46,7 +46,7 @@ export default function Home() {
 
   async function getData() {
     try {
-      const response = await fetch('http://192.168.29.134:1015/getallquerry');
+      const response = await fetch('https://medical-website-backend.onrender.com/getallquerry');
       const result = await response.json();
       
       const public_query = result.filter((res) => res.querytype === 'career query');
