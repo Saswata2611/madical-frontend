@@ -89,7 +89,7 @@ const handleCardClick = (medicine) => {
             />
         </nav>
       <div className={styles.bg}>
-        <h1 className={styles.heading}>medicines</h1>
+        <h1 className={styles.heading}>Brands:</h1>
         <div className={styles.container}>
         {data.map((medicine, index) => (
             <div key={index} className={styles.card} onClick={() => handleCardClick(medicine)}>

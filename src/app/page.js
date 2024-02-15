@@ -20,6 +20,7 @@ export default function Home() {
     username: '',
     phone_no: '',
     email: '',
+    type:'public query',
     message: ''
   };
 
@@ -55,6 +56,7 @@ export default function Home() {
         <ul>
           <li className={styles.liEle}><a href="#home">Home</a></li>
           <li className={styles.liEle}><Link href="/about">About</Link></li>
+          <li className={styles.liEle}><Link href="/career">Career</Link></li>
           <li className={styles.liEle}><a href="/patients">Explore</a></li>
           <li className={styles.liEle}><a href="#contact">Contact</a></li>
         </ul>
@@ -69,6 +71,7 @@ export default function Home() {
         <ul className={styles.nav_link}>
           <li className={styles.li_ele}><a href="#home">Home</a></li>
           <li className={styles.li_ele}><a href="/about">About</a></li>
+          <li className={styles.li_ele}><Link href="/career">Career</Link></li>
           <li className={styles.li_ele}><Link href="/patients">Explore</Link></li>
           <li className={styles.li_ele}><a href="#contact">Contact</a></li>
         </ul>
@@ -83,8 +86,8 @@ export default function Home() {
 
       <div className={styles.home} id="home">
         <div className={styles.overlay}>
-        <h1 className={`${styles.h1} ${styles.home_h}`}>Realize <br /> a Better You</h1>
-        <p className={styles.para}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        <h1 className={`${styles.h1} ${styles.home_h}`}>Welcome to Aestivus Healthcare,</h1>
+        <p className={styles.para}>where innovation meets Healthcare, nutrition and well-being. <br /> Our dedicated focus on pioneering medicines through proprietary drug discovery technology reflects our commitment to setting new standards. Explore our realm of original and innovative drugs as we strive to elevate healthcare for a healthier tomorrow.</p>
         <Link href="/patients"><button className={styles.btn}>Explore <Image src="/forward.svg" alt="" width={24} height={24} /></button></Link>
         </div>
       </div>
@@ -141,22 +144,27 @@ export default function Home() {
 
       <div className={styles.footer}>
         
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.35231277325!2d88.26495090163961!3d22.53540637448262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1707709006917!5m2!1sen!2sin"
-        style={{ width:"365px", height:"350px", border:"0", allowfullscreen:"" }} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.44036860699!2d77.55202507454707!3d13.007605214088924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d83b4dd2565%3A0x5ea6549cc717682!2sRegus%20-%20Bangalore%2C%20Tejas%20Arcade!5e0!3m2!1sen!2sin!4v1708002889911!5m2!1sen!2sin" style={{ width:"350px", height:"350px", border:"0", allowfullscreen:"" }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
         <ul>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#home">Home</a></li>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="/about">About</a></li>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#services">Services</a></li>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#contact">Contact</a></li>
+          <Link href="/login"><li style={{ color: '#ffff', marginLeft:'85px' }}><button className={styles.admin_login}>Admin Login</button></li></Link>
+          <li className={styles.li} style={{ color: '#ffff'  }}>CIN - U21001AS2023PTC025203<br />GST - 18AAZCA3873F1Z3</li>
         </ul>
 
         <ul className={styles.ul}>
-          <li className={styles.li} style={{ color: '#ffff' }}>Address:</li>
-          <li className={styles.li} style={{ color: '#ffff' }}>Suite 360 124 Haley Way, New Jewellside, HI 31096</li>
-          <li className={styles.li} style={{ color: '#ffff' }}>Tele:</li>
-          <li className={styles.li} style={{ color: '#ffff' }}>0123-456-789</li>
-          <li className={styles.li} style={{ color: '#ffff' }}><Link href="/login"><button className={styles.admin_login}>Admin Login</button></Link></li>
+          <li className={styles.li} style={{ color: '#ffff' }}><b>Corporate office address -</b></li>
+          <li className={styles.li} style={{ color: '#ffff' }}>Aestivus Healthcare Pvt. Ltd . 
+Tejas Arcade, #527/B, 3rd Floor,
+1st Main Road, Dr. Rajkumar Road,
+Rajajinagar, Bangalore - 560010, India</li>
+          <li className={styles.li} style={{ color: '#ffff' }}><b>Email -</b><Link href='mailto:info@aestivushealthcare.com'>info@aestivushealthcare.com</Link> <br />
+<b>Website -</b><Link href='www.aestivushealthcare.com'>www.aestivushealthcare.com</Link> <br />
+<b className={styles.b}>Customer Care No. </b><br /> :  +91 70 9905 9994</li>
+          
         </ul>
 
       </div>

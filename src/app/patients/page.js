@@ -100,7 +100,7 @@ const renderData = foundProducts.length > 0 ? foundProducts : data;
             />
         </nav>
       <div className={styles.bg}>
-        <h1 className={styles.heading}>medicines</h1>
+        <h1 className={styles.heading}>Brands</h1>
         <div className={styles.searchContainer} style={{ float: 'right', margin: '16px 0px' }}>
           <input
             className={styles.searchInput}

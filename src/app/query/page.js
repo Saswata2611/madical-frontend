@@ -1,71 +1,42 @@
 'use client';
 
-// Import necessary modules and components
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import styles from './page.module.css';
-import { useState, useEffect } from 'react';
+import Image from "next/image";
+import styles from "./page.module.css";
 import Link from 'next/link';
-import _debounce from 'lodash/debounce';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
-function MyComponent({ imageUrl }) {
-    return (
-      <div>
-        <img className={styles.img}
-          src={imageUrl}
-          alt="Description of the image"
-        />
-      </div>
-    );
-  }
-
-// Define the component
 export default function Home() {
   const router = useRouter();
-  const [data, setData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [foundProducts, setFoundProducts] = useState([]);
 
-  const handleSearch = () => {
-    const productsFound = data.filter((product) =>
-      product.username.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFoundProducts(productsFound);
-  };
-  
-  // Other state variables...
 
   useEffect(() => {
-    getDataDebounced();
-    return () => getDataDebounced.cancel(); // Cancel the debounce on unmount
-  }, [router.asPath]);
+    // Replace the current state with a new one, effectively removing /admin from history
+    window.history.replaceState(null, null, '/');
+    
+    // Add event listener to prevent navigation using the browser back button
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      return (event.returnValue = 'Are you sure you want to leave?');
+    };
 
-  const getDataDebounced = _debounce(getData, 300);
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
-  // Other functions...
-
-  async function getData() {
-    try {
-      const response = await fetch('http://192.168.29.134:1015/getallquerry');
-      const result = await response.json();
-      console.log(result);
-
-      setData(result);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-
-  // Other functions...
-
-  const renderData = foundProducts.length > 0 ? foundProducts : data;
-
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+  const goToAnotherPage = () => {
+    router.replace('/');
+  };
   return (
     <main className={styles.main}>
         <nav className={styles.nav}>
             <ul>
-                <Link href="/admin"><li className={styles.li}>Product</li></Link>
+                <Link href="/admin"><li className={styles.li} >Product</li></Link>
                 <Link href="/query"><li className={styles.li} style={{textDecoration:'underline'}}>Queries</li></Link>
+                <Link href="" onClick={goToAnotherPage}><li className={`${styles.li} ${styles.logout}`}>Log out</li></Link>
             </ul>
             <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
             src="/logo.png"
@@ -74,42 +45,33 @@ export default function Home() {
             height={236}
             />
         </nav>
-      {/* Other components and elements... */}
-      <div className={styles.container} style={{ marginTop: '204px' }}>
-        <h1 className={styles.header}>ALL QUERIES</h1>
-        <div className={styles.searchContainer} style={{ float: 'right', margin: '16px 0px' }}>
-          <input
-            className={styles.searchInput}
-            type="text"
-            placeholder="Search by username"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button className={styles.searchButton} onClick={handleSearch}>
-            Search
-          </button>
+
+        <div className={styles.right}>
+      <div className={styles.container}>
+        <Link href="/public_query">
+        <div className={`${styles.batch} ${styles.bg_y}`}>
+            <Image
+            src="/upload.svg"
+            alt=""
+            width={64}
+            height={64}
+            />
+            <h1 className={styles.heading}>Public Enquery</h1>
         </div>
-        <table className={styles.table}>
-          <thead>
-            <tr className={`${styles.headerRow} ${styles.tr}`}>
-              <th className={`${styles.th}`}>Username</th>
-              <th className={`${styles.th}`}>Phone Number</th>
-              <th className={`${styles.th}`}>Email</th>
-              <th className={`${styles.th}`}>Message</th>
-            </tr>
-          </thead>
-          <tbody>
-            {renderData.map((product, index) => (
-              <tr key={index} className={styles.tr}>
-                <td className={`${styles.td}`}>{product.username}</td>
-                <td className={`${styles.td}`}>{product.phone_no}</td>
-                <td className={`${styles.td}`}>{product.email}</td>
-                <td className={`${styles.td}`}>{product.message}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        </Link>
+        <Link href="/career_query">
+        <div className={`${styles.batch} ${styles.bg_y}`}>
+            <Image
+            src="/eye.svg"
+            alt=""
+            width={64}
+            height={64}
+            />
+            <h1 className={styles.heading}>Career Enquery</h1>
+        </div>
+        </Link>
+        </div>
       </div>
     </main>
-  );
+    );
 }

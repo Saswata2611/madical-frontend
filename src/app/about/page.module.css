@@ -92,7 +92,7 @@
     font-size:20px;
     font-weight:300;
     color:#ffff;
-    width:45%;
+    width:100%;
     margin-top:16px;
   }
 
@@ -112,8 +112,9 @@
         height:860px;
         flex-direction:column;
         font-size: 16px;
-        margin-left: -180px;
+        margin-left: -198px;
         margin-top: 26px;
+        padding-top: 120px;
     }
 
     .left {
@@ -125,12 +126,13 @@
     .right {
 display: none;
     }
+
     .about2 {
-      height: 860px;
+      height: 620px;
       flex-direction: column;
-      margin-left: 415px;
-      margin-top: -140px;
+      margin-left: 405px;
       margin-bottom: 100px;
+      padding-top: 150px;
   }
 
   .left2 {
