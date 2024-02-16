@@ -37,12 +37,13 @@ export default function Home() {
                 <Link href="/query"><li className={styles.li}>Queries</li></Link>
                 <Link href="" onClick={goToAnotherPage}><li className={`${styles.li} ${styles.logout}`}>Log out</li></Link>
             </ul>
-            <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
-            src="/logo.png"
-            alt=""
-            width={236}
-            height={236}
-            />
+            <Image className={styles.logo}
+        src="/logo.svg"
+        alt=""
+        width={236}
+        height={336}
+        style={{paddingTop:'50px'}}
+        />
         </nav>
         <div className={styles.right}>
       <div className={styles.container}>

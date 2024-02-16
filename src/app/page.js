@@ -63,10 +63,11 @@ export default function Home() {
       </div>
       <nav className={styles.nav}>
         <Image className={styles.logo}
-        src="/logo.png"
+        src="/logo.svg"
         alt=""
         width={236}
-        height={236}
+        height={336}
+        style={{paddingTop:'50px'}}
         />
         <ul className={styles.nav_link}>
           <li className={styles.li_ele}><a href="#home">Home</a></li>

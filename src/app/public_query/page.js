@@ -72,12 +72,13 @@ export default function Home() {
                 height={34}
                 />
         </Link>
-            <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
-            src="/logo.png"
-            alt=""
-            width={236}
-            height={236}
-            />
+        <Image className={styles.logo}
+        src="/logo.svg"
+        alt=""
+        width={236}
+        height={336}
+        style={{paddingTop:'50px'}}
+        />
         </nav>
       {/* Other components and elements... */}
       <div className={styles.container} style={{ marginTop: '204px' }}>

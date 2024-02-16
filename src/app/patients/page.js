@@ -92,12 +92,13 @@ const renderData = foundProducts.length > 0 ? foundProducts : data;
                 height={34}
                 />
             </Link>
-            <Image className={styles.logo} style={{ transform: 'translateY(-5px)' }}
-            src="/logo.png"
-            alt=""
-            width={236}
-            height={236}
-            />
+            <Image className={styles.logo}
+        src="/logo.svg"
+        alt=""
+        width={236}
+        height={336}
+        style={{paddingTop:'50px'}}
+        />
         </nav>
       <div className={styles.bg}>
         <h1 className={styles.heading}>Brands</h1>
