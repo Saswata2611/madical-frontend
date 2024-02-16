@@ -144,7 +144,7 @@ export default function Home() {
 
       <div className={styles.footer}>
         
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.44036860699!2d77.55202507454707!3d13.007605214088924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d83b4dd2565%3A0x5ea6549cc717682!2sRegus%20-%20Bangalore%2C%20Tejas%20Arcade!5e0!3m2!1sen!2sin!4v1708002889911!5m2!1sen!2sin" style={{ width:"350px", height:"350px", border:"0", allowfullscreen:"" }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d242.96496923588188!2d77.55456471592747!3d13.00766013652675!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1708105615643!5m2!1sen!2sin" style={{ width:"350px", height:"350px", border:"0", allowfullscreen:"" }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
         <ul>
           <li className={styles.liEle} style={{ color: '#ffff' }}><a href="#home">Home</a></li>
